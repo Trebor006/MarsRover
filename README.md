@@ -12,9 +12,4 @@ Esta direccion debe ser valida.
 Ejemplo de ruta valida "D:\\EntradaDeDatos.txt"
 
 en todo caso dentro del archivo EntradaDeDatos.txt debera estar todos los datos necesarios, de acuerdo a la especificacion del PDF.
-Ejmplo de datos de Entrada.
-5 5
-1 2 N
-LMLMLMLMM
-3 3 E
-MMRMMRMRRM
+Los Ejemplos de datos de Entrada ueden ser visto desde el archivo EntradaDeDatos.txt que esta dentro de proyecto.
