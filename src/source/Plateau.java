@@ -59,7 +59,7 @@ public class Plateau {
                 }
                 break;
                 case 'L': {
-                    toLetf();
+                    toLeft();
                 }
                 break;
                 case 'R': {
@@ -95,7 +95,7 @@ public class Plateau {
         return String.format("%d %d %c", rover_pos_x, rover_pos_y, punto_cardinal);
     }
 
-    private void toLetf() {
+    private void toLeft() {
         direction--;
         if (direction < 0) {
             direction = 3;

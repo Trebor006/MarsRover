@@ -17,23 +17,6 @@ import java.util.Scanner;
  */
 public class PlateauMain {
      public void ejecutarPrueba(String direccion_archivo) {
-
-//        Plateau px = new Plateau(5, 5);
-//        px.establecerPosicionRoverInicial(1, 2, 'N');
-//        String movimientos = "LMLMLMLMM";
-//        px.establecerMovimientosRover(movimientos);
-//        px.obtenerDireccionFinal();
-//        
-//        px.establecerPosicionRoverInicial(3, 3, 'E');
-//         movimientos = "MMRMMRMRRM";
-//        px.establecerMovimientosRover(movimientos);
-//        px.obtenerDireccionFinal();
-//        
-//        Plateau px = new Plateau(5, 5);
-//        px.establecerPosicionRoverInicial(2, 3, "W");
-//        String movimientos = "MRMRMRMMLMR";
-//        px.establecerMovimientosRover(movimientos);
-//        px.obtenerDireccionFinal();
         File archivo = null;
         FileReader fr = null;
         BufferedReader br = null;
@@ -56,10 +39,7 @@ public class PlateauMain {
                     String[] linea_array = linea.split(" ");
                     maxX = Integer.valueOf(linea_array[0]);
                     maxY = Integer.valueOf(linea_array[1]);
-                    inicio = false;
-                    /**
-                     * ESTABLECEMOS EL MAXIMO DEL PLATEAU
-                     */
+                    inicio = false;                   
                     px = new Plateau(maxX, maxY);
                 } else {
                     switch (cont) {
