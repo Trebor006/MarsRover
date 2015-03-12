@@ -16,3 +16,8 @@ Los Ejemplos de datos de Entrada ueden ser visto desde el archivo EntradaDeDatos
 Ademas tambien se puede ver en las pruebas unitarias.
 
 Ejecutar las Pruebas unitarias para verificar los resultados del ejemplo descritos en el pdf.
+
+
+puedes explorar la misma solucion en otro lenguaje diferente (python)
+
+https://github.com/Trebor006/MarsRoverPython
