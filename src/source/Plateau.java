@@ -14,9 +14,9 @@ public class Plateau {
 
     int maxX, maxY;
     /**
-     * direccion = 0 = N direccion = 1 = E direccion = 2 = S direccion = 3 = O
+     * direction = 0 = N direction = 1 = E direction = 2 = S direction = 3 = O
      */
-    public int direccion;
+    public int direction;
     public int rover_pos_x, rover_pos_y;
 
     public Plateau() {
@@ -32,19 +32,19 @@ public class Plateau {
         rover_pos_y = y;
         switch (dir) {
             case 'N': {
-                direccion = 0;
+                direction = 0;
             }
             break;
             case 'E': {
-                direccion = 1;
+                direction = 1;
             }
             break;
             case 'S': {
-                direccion = 2;
+                direction = 2;
             }
             break;
             case 'W': {
-                direccion = 3;
+                direction = 3;
             }
             break;
         }
@@ -55,46 +55,15 @@ public class Plateau {
             char comando = movimientos.charAt(i);
             switch (comando) {
                 case 'M': {
-                    switch (direccion) {
-                        case 0: {
-                            if (rover_pos_y <= maxY - 1) {
-                                rover_pos_y++;
-                            }
-                        }
-                        break;
-                        case 1: {
-                            if (rover_pos_x <= maxX - 1) {
-                                rover_pos_x++;
-                            }
-                        }
-                        break;
-                        case 2: {
-                            if (rover_pos_y >= 1) {
-                                rover_pos_y--;
-                            }
-                        }
-                        break;
-                        case 3: {
-                            if (rover_pos_x >= 1) {
-                                rover_pos_x--;
-                            }
-                        }
-                        break;
-                    }
+                    move();
                 }
                 break;
                 case 'L': {
-                    direccion--;
-                    if (direccion < 0) {
-                        direccion = 3;
-                    }
+                    toLetf();
                 }
                 break;
                 case 'R': {
-                    direccion++;
-                    if (direccion > 3) {
-                        direccion = 0;
-                    }
+                    toRight();
 
                 }
                 break;
@@ -105,7 +74,7 @@ public class Plateau {
 
     public String obtenerDireccionFinal() {
         char punto_cardinal = 0;
-        switch (direccion) {
+        switch (direction) {
             case 0: {
                 punto_cardinal = 'N';
             }
@@ -124,6 +93,49 @@ public class Plateau {
             break;
         }
         return String.format("%d %d %c", rover_pos_x, rover_pos_y, punto_cardinal);
+    }
+
+    private void toLetf() {
+        direction--;
+        if (direction < 0) {
+            direction = 3;
+        }
+    }
+
+    private void toRight() {
+        direction++;
+        if (direction > 3) {
+            direction = 0;
+        }
+    }
+
+    private void move() {
+        switch (direction) {
+            case 0: {
+                if (rover_pos_y <= maxY - 1) {
+                    rover_pos_y++;
+                }
+            }
+            break;
+            case 1: {
+                if (rover_pos_x <= maxX - 1) {
+                    rover_pos_x++;
+                }
+            }
+            break;
+            case 2: {
+                if (rover_pos_y >= 1) {
+                    rover_pos_y--;
+                }
+            }
+            break;
+            case 3: {
+                if (rover_pos_x >= 1) {
+                    rover_pos_x--;
+                }
+            }
+            break;
+        }
     }
 
 }
