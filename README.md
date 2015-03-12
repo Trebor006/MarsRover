@@ -14,3 +14,5 @@ Ejemplo de ruta valida "D:\\EntradaDeDatos.txt"
 en todo caso dentro del archivo EntradaDeDatos.txt debera estar todos los datos necesarios, de acuerdo a la especificacion del PDF.
 Los Ejemplos de datos de Entrada ueden ser visto desde el archivo EntradaDeDatos.txt que esta dentro de proyecto.
 Ademas tambien se puede ver en las pruebas unitarias.
+
+Ejecutar las Pruebas unitarias para verificar los resultados del ejemplo.
