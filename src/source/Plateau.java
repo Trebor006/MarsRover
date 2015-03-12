@@ -14,7 +14,10 @@ public class Plateau {
 
     int maxX, maxY;
     /**
-     * direction = 0 = N direction = 1 = E direction = 2 = S direction = 3 = O
+     * direction = 0 = N 
+     * direction = 1 = E 
+     * direction = 2 = S 
+     * direction = 3 = W
      */
     public int direction;
     public int rover_pos_x, rover_pos_y;
