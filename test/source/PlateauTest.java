@@ -60,7 +60,7 @@ public class PlateauTest {
         char dir = 'E';
         String expResult = "5 1 E";
         String movimientos = "MMRMMRMRRM";
-        
+
         Plateau px = new Plateau(x, y);
         px.establecerPosicionRoverInicial(x1, y1, dir);
         px.establecerMovimientosRover(movimientos);
