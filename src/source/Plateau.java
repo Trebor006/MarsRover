@@ -1,11 +1,5 @@
 package source;
 
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  *
  * @author Robert
@@ -30,6 +24,13 @@ public class Plateau {
         this.maxY = maxY;
     }
 
+    /**
+     * Establece la posicion inicial de un rover
+     *
+     * @param x posicion en el eje X
+     * @param y posicion en el eje Y
+     * @param dir direccion hacia la q apunta el rover (N,E,S,W)
+     */
     public void establecerPosicionRoverInicial(int x, int y, char dir) {
         rover_pos_x = x;
         rover_pos_y = y;
@@ -53,6 +54,13 @@ public class Plateau {
         }
     }
 
+    /**
+     * Establece los movimientos que ejecutara el Rover y ademas los ejecuta.
+     * dejando los resultados en las variables rover_pos_x, rover_pos_y y
+     * direccion
+     *
+     * @param movimientos
+     */
     public void establecerMovimientosRover(String movimientos) {
         for (int i = 0; i < movimientos.length(); i++) {
             char comando = movimientos.charAt(i);
@@ -75,6 +83,10 @@ public class Plateau {
 
     }
 
+    /**
+     *
+     * @return la posicion POSX,POSY y direccion del Rover
+     */
     public String obtenerDireccionFinal() {
         char punto_cardinal = 0;
         switch (direction) {
@@ -98,6 +110,9 @@ public class Plateau {
         return String.format("%d %d %c", rover_pos_x, rover_pos_y, punto_cardinal);
     }
 
+    /**
+     * Girar a la Izquierda el Rover Actual
+     */
     private void toLeft() {
         direction--;
         if (direction < 0) {
@@ -105,6 +120,9 @@ public class Plateau {
         }
     }
 
+    /**
+     * girar a la derecha el Rover actual
+     */
     private void toRight() {
         direction++;
         if (direction > 3) {
@@ -112,6 +130,10 @@ public class Plateau {
         }
     }
 
+    /**
+     * Avanza hacia la direccion establecida. dentro de los margenes del
+     * Plateau. MaxX,MaxY
+     */
     private void move() {
         switch (direction) {
             case 0: {

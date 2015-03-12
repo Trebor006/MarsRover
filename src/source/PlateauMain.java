@@ -5,17 +5,18 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.Scanner;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  *
  * @author Robert
  */
 public class PlateauMain {
 
+    /**
+     * Recibe la direccion de un archivo y ejecuta las ordenes establecidas en
+     * el mismo
+     *
+     * @param direccion_archivo
+     */
     public void ejecutarPrueba(String direccion_archivo) {
         File archivo = null;
         FileReader fr = null;
@@ -61,7 +62,7 @@ public class PlateauMain {
                         break;
                     }
                 }
-            }            
+            }
             System.out.println("==========");
         } catch (Exception e) {
             e.printStackTrace();
@@ -84,7 +85,6 @@ public class PlateauMain {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca la direccion del archivo a leer");
         String direccion = sc.nextLine();
-//        plateauMain.ejecutarPrueba("D:\\EntradaDeDatos.txt");
         plateauMain.ejecutarPrueba(direccion);
     }
 }
