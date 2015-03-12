@@ -15,4 +15,4 @@ en todo caso dentro del archivo EntradaDeDatos.txt debera estar todos los datos 
 Los Ejemplos de datos de Entrada ueden ser visto desde el archivo EntradaDeDatos.txt que esta dentro de proyecto.
 Ademas tambien se puede ver en las pruebas unitarias.
 
-Ejecutar las Pruebas unitarias para verificar los resultados del ejemplo.
+Ejecutar las Pruebas unitarias para verificar los resultados del ejemplo descritos en el pdf.
